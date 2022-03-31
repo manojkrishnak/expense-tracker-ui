@@ -1,38 +1,318 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, 0.15);  
+}
+
+.app{
+  box-shadow: 2px -2px 10px 0 rgba(0, 0, 0, 0.15), -2px 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-ct {
+  justify-content: center;
+}
+
+.align-ct {
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.justify-bt {
+  justify-content: space-between;
+}
+
+.selected-type-btn{
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: rgb(1, 146, 1);
+}
+
+.expense-color {
+  border-right: 5px solid red;
+}
+
+.income-color {
+  border-right: 5px solid green;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.submit-btn {
+  background-color: #e1ad01;
+  padding: 0.5rem;
+  border: 0;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.name-input,
+.amount-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+fieldset {
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expense {
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  background-color: #fff;
 }
+
+.type-btn {
+  background-color: rgb(196, 196, 196);
+  border: 0;
+  padding: 0.5rem 0.7rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-expense-heading,
+.history-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-bottom: 2px solid rgb(177, 177, 177);
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.total-heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.box {
+  width: 40%;
+  height: 40%;
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.total {
+  margin: 1.5rem 0;
+}
+
+.history {
+  overflow-y: scroll;
+  height: 25vh;
+  padding: 0.3rem;
+}
+
+.total-income {
+  color: green;
+}
+
+.total-expense {
+  color: red;
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* .no-transc-msg{
+  text-align: center;
+} */
+
+.date {
+  font-size: 0.7rem;
+}
+
+.select-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  margin-right: 0.5rem;
+}
+.row-1-2 {
+  margin-bottom: 0.5rem;
+}
+
+.history-container {
+  margin-bottom: 1rem;
+}
+
+
