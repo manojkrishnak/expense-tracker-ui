@@ -19,11 +19,13 @@ export function formatDate(date) {
     .replaceAll(",", "");
 }
 
-export function setExpensesToLocalStorage(key, expense) {
+export function setExpensesToLocalStorage(key, mode, expense) {
   const allExpenses = getExpensesFromLocalStorage(key);
   console.log(">> ", allExpenses);
   if (!allExpenses) {
     return window.localStorage.setItem(key, JSON.stringify([expense]));
+  }else if(mode === "update" || mode === "delete"){
+    return window.localStorage.setItem(key, JSON.stringify([...expense]));
   } else {
     return window.localStorage.setItem(
       key,

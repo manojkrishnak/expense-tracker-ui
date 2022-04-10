@@ -178,6 +178,22 @@ body {
   justify-content: space-between;
 }
 
+.flex-10{
+  flex: 0 1 10%;
+}
+
+.flex-90{
+  flex: 0 1 90%;
+}
+
+.flex-85{
+  flex: 0 1 85%;
+}
+
+.border{
+  border: 1px solid red;
+}
+
 .selected-type-btn{
   background-color: rgba(0, 0, 0, 0.55);
 }
@@ -300,7 +316,7 @@ fieldset {
   font-size: 0.7rem;
 }
 
-.select-label {
+.select-label, .date-label {
   display: inline-block;
   font-size: 0.9rem;
   font-weight: 700;
@@ -316,3 +332,12 @@ fieldset {
 }
 
 
+/* Icons */
+.icon{
+  margin-right: 0.5rem;
+}
+
+.delete-btn{
+  font-weight: 700;
+  cursor: pointer;
+}
