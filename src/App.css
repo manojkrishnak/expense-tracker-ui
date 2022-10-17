@@ -271,6 +271,10 @@ fieldset {
   margin-bottom: 1.5rem;
 }
 
+.history-heading{
+  margin-bottom: 0.7rem;
+}
+
 .total-heading {
   text-transform: uppercase;
   font-weight: 600;
@@ -340,4 +344,26 @@ fieldset {
 .delete-btn{
   font-weight: 700;
   cursor: pointer;
+}
+
+/* Not found page */
+.not-found{
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* show all button */
+.show-all-btn{
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: blue;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.show-all-btn:hover{
+  text-decoration: underline;
 }

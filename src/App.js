@@ -107,10 +107,10 @@ function App() {
   /* 
   1. implement to show only that months expenses
   2. add category ( Books, food, medical etc)  -- done
-  2. download report excel/pdf
+  2. download report excel/pdf -- create an api and send that report to mail id as an attachment and mail body
   3. delete option -- done
   4. update option -- done
-  5. show few tranx. in home page and all in another page (convert to SPA)
+  5. show few tranx. in home page and all in another page (convert to SPA) -- partially done and implement Context api 
   6. for all record page implement view for other months and sort (asec, desc) on amount
   7. show pie chart and normal table on the category spent 
   8. show good evening as such welcome message

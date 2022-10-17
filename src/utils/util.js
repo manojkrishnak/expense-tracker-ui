@@ -29,7 +29,7 @@ export function setExpensesToLocalStorage(key, mode, expense) {
   } else {
     return window.localStorage.setItem(
       key,
-      JSON.stringify([...allExpenses, expense])
+      JSON.stringify([expense, ...allExpenses])
     );
   }
 }

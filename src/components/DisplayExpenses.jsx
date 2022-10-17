@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { formatDate } from "../utils/util";
 import Icon from "./Icon";
 
@@ -5,9 +6,10 @@ function DisplayExpenses(props) {
   return (
     <div className="history-container">
       <h2 className="history-heading">History</h2>
+      <Link to="/" className="show-all-btn">Show all</Link>
       <ul className="history">
         {(props.allExpenses && props.allExpenses.length > 0) ? (
-          props.allExpenses.map((expense, i) => (
+          props.allExpenses.slice(0, 3).map((expense, i) => (
             <li
               className={
                 expense.type === "Income"
